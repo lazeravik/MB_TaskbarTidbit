@@ -94,13 +94,27 @@ namespace MusicBeePlugin
                     string artist = mbApiInterface.NowPlaying_GetFileTag(MetaDataType.Artist);
 
                     break;
+                case NotificationType.PlayStateChanged:
+                    switch (mbApiInterface.Player_GetPlayState())
+                    {
+                        case PlayState.Playing:
+                            TaskbarProgress.SetState(mbApiInterface.MB_GetWindowHandle(), TaskbarProgress.TaskbarStates.Normal);
+                            break;
+                        case PlayState.Paused:
+                            TaskbarProgress.SetState(mbApiInterface.MB_GetWindowHandle(), TaskbarProgress.TaskbarStates.Paused);
+                            break;
+                        default:
+                            TaskbarProgress.SetState(mbApiInterface.MB_GetWindowHandle(), TaskbarProgress.TaskbarStates.NoProgress);
+                            break;
+                    }
+                    break;
 
             }
         }
 
 		private void initTimer()
 		{
-			timer = new System.Timers.Timer();
+            timer = new System.Timers.Timer();
 			timer.Interval = 100;
 			timer.Elapsed += new ElapsedEventHandler(onTime);
 			timer.Enabled = true;

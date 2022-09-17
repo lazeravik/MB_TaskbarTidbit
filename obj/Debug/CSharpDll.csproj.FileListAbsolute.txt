@@ -1,0 +1,6 @@
+C:\Users\Leo\source\repos\MB_TaskbarTidbit\bin\Debug\mb_TaskbarTidbit.dll
+C:\Users\Leo\source\repos\MB_TaskbarTidbit\bin\Debug\mb_TaskbarTidbit.pdb
+C:\Users\Leo\source\repos\MB_TaskbarTidbit\obj\Debug\CSharpDll.csproj.AssemblyReference.cache
+C:\Users\Leo\source\repos\MB_TaskbarTidbit\obj\Debug\CSharpDll.csproj.CoreCompileInputs.cache
+C:\Users\Leo\source\repos\MB_TaskbarTidbit\obj\Debug\mb_TaskbarTidbit.dll
+C:\Users\Leo\source\repos\MB_TaskbarTidbit\obj\Debug\mb_TaskbarTidbit.pdb
